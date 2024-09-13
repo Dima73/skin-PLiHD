@@ -448,7 +448,7 @@
 			<convert type="ServiceOrbitalPosition"/>
 		</widget>
 		<widget name="channel" position="30,592" size="720,45" transparent="1" font="Regular;33" halign="left"/>
-		<widget name="datetime" position="30,652" size="180,45" transparent="1" font="Regular;33" halign="left"/>
+		<widget name="datetime" position="30,652" size="190,45" transparent="1" font="Regular;33" halign="left"/>
 		<widget source="Event" render="Label" position="210,652" size="120,45" transparent="1" font="Regular;33" halign="left">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format: - %H:%M</convert>
@@ -1145,6 +1145,8 @@
 
 	<screen name="TimerEntry" position="fill" title="Timer entry" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
+		<panel name="VKeyIconPanel"/>
+		<widget name="HelpWindow" position="center,650" size="80,0"/>
 		<widget name="config" position="780,105" size="1110,765" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 	</screen>
 
@@ -1154,6 +1156,9 @@
 		<widget name="timerlist" position="780,100" size="1110,912" scrollbarMode="showOnDemand" itemHeight="76" rowSplit="42" setEventNameFont="Regular;32" setServiceNameFont="Regular;28" setFont="Regular;28" satPosLeft="250"/>
 		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" valign="center" halign="left" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"></convert>
+		</widget>
+		<widget source="Service" render="Label" position="600,525" size="150,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;26" halign="right">
+			<convert type="ServiceOrbitalPosition"/>
 		</widget>
 		<widget name="description" position="30,570" size="720,385" transparent="1" font="Regular;30" halign="block"/>
 	</screen>
